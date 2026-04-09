@@ -261,53 +261,6 @@ You should now see:
 
 ---
 
-## Main API endpoints
-
-### Backend endpoints
-
-#### `GET /token`
-Returns an Agora RTC token for a channel and uid.
-
-Example:
-
-```text
-/token?channel=demo-channel&uid=12345
-```
-
-#### `POST /stt/start`
-Starts the Agora STT agent for a channel.
-
-Request:
-
-```json
-{
-  "channel": "demo-channel",
-  "uid": 12345
-}
-```
-
-#### `GET /stt/query`
-Queries STT agent status.
-
-#### `POST /stt/stop`
-Stops the STT agent.
-
-#### `POST /summary`
-Generates meeting notes from transcript lines.
-
-Request:
-
-```json
-{
-  "transcript": [
-    "hello everyone",
-    "today we are reviewing the agora prototype"
-  ]
-}
-```
-
----
-
 ## Current workflow
 
 1. React requests an RTC token from the Go backend
