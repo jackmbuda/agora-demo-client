@@ -137,6 +137,10 @@ These are used for:
 
 ## Environment variables
 
+Before running the app, create a `.env` file in both the `client/` and `server/` directories.
+
+These environment variables must be loaded before starting the app. If your shell or workflow requires it, source them before use.
+
 ## `client/.env`
 
 ```env
@@ -146,14 +150,14 @@ VITE_API_BASE_URL=http://localhost:8080
 ## `server/.env`
 
 ```env
-AGORA_APP_ID=your_agora_app_id
-AGORA_APP_CERTIFICATE=your_agora_app_certificate
-AGORA_CUSTOMER_ID=your_agora_customer_id
-AGORA_CUSTOMER_SECRET=your_agora_customer_secret
-OPENAI_API_KEY=your_openai_api_key
-OPENAI_MODEL=gpt-4o-mini
-PORT=8080
+AGORA_APP_ID=your-app-id
+AGORA_APP_CERTIFICATE=your-app-certificate
+AGORA_CUSTOMER_ID=your-customer-id
+AGORA_CUSTOMER_SECRET=your-customer-secret
+OPENAI_API_KEY=your-open-api-key
 ```
+
+If you are loading environment variables manually in your shell, make sure they are sourced before running the frontend or backend.
 
 ---
 
@@ -319,7 +323,6 @@ Check:
 Check:
 - `OPENAI_API_KEY`
 - backend logs
-- model name in `OPENAI_MODEL`
 
 ### No video appears
 Check:
